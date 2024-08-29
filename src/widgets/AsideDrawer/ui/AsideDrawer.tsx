@@ -13,19 +13,15 @@ const AsideDrawer = ({
   };
 
   return (
-    <>
-      <Drawer
-        title="Filters"
-        placement="left"
-        closable={false}
-        onClose={onClose}
-        open={open}
-      >
-        <div>
-          <Aside />
-        </div>
-      </Drawer>
-    </>
+    <Drawer
+      title="Filters"
+      placement="left"
+      closable={false}
+      onClose={onClose}
+      open={open}
+    >
+      <Aside />
+    </Drawer>
   );
 };
 

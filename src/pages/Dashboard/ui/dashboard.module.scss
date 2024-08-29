@@ -53,108 +53,9 @@
     }
   }
 
-  &__headBottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include media-custom(570px) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  }
-
   &__filters {
     display: flex;
     gap: 14px;
-  }
-  &__sortContainer {
-    @include media-custom(800px) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 23px;
-    }
-    @include media-custom(400px) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-  &__searchMobile {
-    display: none;
-    @include media-custom(800px) {
-      display: unset;
-      width: 200px;
-    }
-    @include media-custom(630px) {
-      display: unset;
-      width: 150px;
-    }
-  }
-
-  &__sort {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    width: 87px;
-    height: 37px;
-    background-color: var(--Container);
-    cursor: pointer;
-  }
-  &__gridSort {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 37px;
-    border-radius: 10px 0 0 10px;
-    background-color: unset;
-  }
-  &__gridSelected {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 37px;
-    border-radius: 10px 0 0 10px;
-    background-color: var(--sortSwitch);
-  }
-  &__listSelected {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 37px;
-    border-radius: 0 10px 10px 0;
-    background-color: var(--sortSwitch);
-  }
-  &__gridIcon {
-    path {
-      fill: var(--text);
-    }
-  }
-  &__gridIselected {
-    path {
-      fill: var(--SelectColor);
-    }
-  }
-  &__listIcon {
-    path {
-      fill: var(--text);
-    }
-  }
-  &__listIselected {
-    path {
-      fill: var(--SelectColor);
-    }
-  }
-  &__listSort {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
   }
 
   &__title {
@@ -168,98 +69,14 @@
     display: flex;
     justify-content: space-between;
   }
-  &__store {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: flex-start;
-    width: 80vw;
-    @include media-custom(1450px) {
-      //display: unset; //ne uveren
-      width: unset;
-    }
-  }
 
-  &__nftContainer {
-    display: flex;
-    justify-content: center;
-    //width: 1142px;
-    //width:auto ;
-    width: 100%;
-    max-width: 1142px;
-    height: auto;
-    border-radius: 10px;
-    background-color: var(--Container);
-  }
-  &__nftContainerList {
-    display: flex;
-    justify-content: center;
-    //width: 1142px;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    background-color: var(--Container);
-  }
+
 
   &__pagContainer {
     flex-shrink: 0;
   }
 
-  &__nfts {
-    //display: flex;
-    //flex-direction: row;
-    //justify-content: center;
-    //flex-wrap: wrap;
-    //gap: 23px;
-    //padding: 16px;
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 23px;
-    padding: 16px 40px;
-    @include media-custom(1679px) {
-      display: grid;
-      grid-template-columns: repeat(4, 250px);
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 23px;
-    }
-    @include media-custom(1410px) {
-      grid-template-columns: repeat(3, 250px);
-    }
-    @include media-custom(1148px) {
-      grid-template-columns: repeat(2, 250px);
-    }
-    @include media-custom(900px) {
-      grid-template-columns: repeat(3, 250px);
-    }
-    @include media-custom(888px) {
-      grid-template-columns: repeat(2, 250px);
-    }
-    @include media-custom(608px) {
-      grid-template-columns: repeat(1, 250px);
-    }
-    @include media-custom(400px) {
-      grid-template-columns: repeat(1, 215px);
-    }
-  }
-  &__nftsList {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 23px;
-    padding: 16px;
-    @include media-custom($mediaWidthMob) {
-      gap: 16px;
-    }
 
-  }
   &__input {
     padding-left: 17px;
     border: none !important;
@@ -361,7 +178,7 @@
     justify-content: center !important;
     align-items: center !important;
     a {
-      color: var(--text)!important;
+      color: var(--text) !important;
       padding: 0 !important;
       width: 34px !important;
     }
@@ -372,10 +189,11 @@
     margin-bottom: 1px !important ;
     padding: 1px !important;
     a {
-      color: var(--SelectColor)!important;
-    }::before {
-       content: "Page ";
-     }
+      color: var(--SelectColor) !important;
+    }
+    ::before {
+      content: "Page ";
+    }
   }
   .anticon {
     path {

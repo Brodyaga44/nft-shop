@@ -1,0 +1,82 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+
+.store {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 80vw;
+    @include media-custom(1450px) {
+      //display: unset; //ne uveren
+      width: unset;
+    }
+  &__nftContainer {
+    display: flex;
+    justify-content: center;
+    //width: 1142px;
+    //width:auto ;
+    width: 100%;
+    max-width: 1142px;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--Container);
+  }
+  &__nftContainerList {
+    display: flex;
+    justify-content: center;
+    //width: 1142px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--Container);
+  }
+  &__nfts {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    padding: 16px 40px;
+    @include media-custom(1679px) {
+      display: grid;
+      grid-template-columns: repeat(4, 250px);
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 23px;
+    }
+    @include media-custom(1410px) {
+      grid-template-columns: repeat(3, 250px);
+    }
+    @include media-custom(1148px) {
+      grid-template-columns: repeat(2, 250px);
+    }
+    @include media-custom(900px) {
+      grid-template-columns: repeat(3, 250px);
+    }
+    @include media-custom(888px) {
+      grid-template-columns: repeat(2, 250px);
+    }
+    @include media-custom(608px) {
+      grid-template-columns: repeat(1, 250px);
+    }
+    @include media-custom(400px) {
+      grid-template-columns: repeat(1, 215px);
+    }
+  }
+  &__nftsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    padding: 16px;
+    @include media-custom($mediaWidthMob) {
+      gap: 16px;
+    }
+  }
+}

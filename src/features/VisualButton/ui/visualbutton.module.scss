@@ -1,0 +1,105 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+
+.visual {
+  &__headBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-custom(570px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__sortContainer {
+    @include media-custom(800px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 23px;
+    }
+    @include media-custom(400px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__searchMobile {
+    display: none;
+    @include media-custom(800px) {
+      display: unset;
+      width: 200px;
+    }
+    @include media-custom(630px) {
+      display: unset;
+      width: 150px;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 87px;
+    height: 37px;
+    background-color: var(--Container);
+    cursor: pointer;
+  }
+
+  &__gridSort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 37px;
+    border-radius: 10px 0 0 10px;
+    background-color: unset;
+  }
+  &__gridSelected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 37px;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--sortSwitch);
+  }
+  &__listSelected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 37px;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--sortSwitch);
+  }
+  &__gridIcon {
+    path {
+      fill: var(--text);
+    }
+  }
+  &__gridIselected {
+    path {
+      fill: var(--SelectColor);
+    }
+  }
+  &__listIcon {
+    path {
+      fill: var(--text);
+    }
+  }
+  &__listIselected {
+    path {
+      fill: var(--SelectColor);
+    }
+  }
+  &__listSort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+  }
+}

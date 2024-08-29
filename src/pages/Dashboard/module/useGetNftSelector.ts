@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import $api from "../../../shared/api/api.ts";
 import { AxiosResponse } from "axios";
 
-const UseGetNftSelector = () => {
+const useGetNftSelector = () => {
   const [selector, setSelector] = useState<INFTPost[]>([]);
   const { id } = useParams();
   const getData = async () => {
@@ -24,4 +24,4 @@ const UseGetNftSelector = () => {
 
 //тут надо запрос на (словарь?), жду антоху
 
-export default UseGetNftSelector;
+export default useGetNftSelector;
