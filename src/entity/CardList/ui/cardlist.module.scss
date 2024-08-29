@@ -1,0 +1,224 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+.list {
+  &__CardL {
+    height: 250px;
+    //width: 1090px;
+    width: 77vw;
+    background-color: var(--nftCard);
+    border-radius: 20px;
+    @include media-custom($mediaWidthMid) {
+      width: 69vw;
+      height: 175px;
+    }
+    @include media-custom(1050px) {
+      width: 65vw;
+    }
+    @include media-custom(900px) {
+      width: 88vw;
+    }
+    @include media-custom($mediaWidthMob) {
+      height: 10vh;
+    }
+    @include media-custom(500px) {
+      width: 80vw;
+    }
+    @include media-custom(350px) {
+      width: 78vw;
+    }
+  }
+  &__PhotoContainerL {
+    height: 100%;
+  }
+
+  &__PhotoL {
+    //width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  &__bodyL {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 250px;
+    @include media-custom($mediaWidthMid) {
+      height: 175px;
+    }
+    @include media-custom($mediaWidthMob) {
+      height: 10vh;
+    }
+  }
+
+  &__titleL {
+    font: 500 34px $font;
+    color: var(--limeBlack);
+    @include media-custom($mediaWidthMid) {
+      font-size: 22px;
+    }
+    @include media-custom($mediaWidthMob) {
+      font-size: 14px;
+    }
+    @include media-custom(415px) {
+      font-size: 12px;
+      word-wrap: anywhere;
+    }
+  }
+
+  &__AuthorL {
+    font: 400 24px/1.1 $font;
+    line-height: 20.75px;
+    color: var(--grayBlue);
+    @include media-custom($mediaWidthMid) {
+      font-size: 18px;
+    }
+    @include media-custom($mediaWidthMob) {
+      font-size: 12px;
+    }
+  }
+
+  &__contentL {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @include media-custom($mediaWidthMob) {
+      display: unset;
+    }
+    @include media-custom($mediaWidthMob) {
+      display: flex;
+    }
+    @include media-custom(415px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__textL {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    @include media-custom($mediaWidthMid) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include media-custom(415px) {
+      padding: 3px 3px 0 3px;
+    }
+  }
+
+  &__priceBlockL {
+    display: flex;
+    padding: 15px 18px 18px 10px;
+    color: var(--limeBlack);
+    font: 400 14px $font;
+    line-height: 20.75px;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+    @include media-custom(415px) {
+      padding: unset;
+    }
+  }
+
+  &__priceContentL {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include media-custom(915px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+    @include media-custom(500px) {
+      flex-direction: column;
+      gap: 3px;
+    }
+    @include media-custom(415px) {
+      flex-direction: column;
+      gap: unset;
+    }
+  }
+
+  &__priceTypeL {
+    font-size: 24px;
+    @include media-custom($mediaWidthMid) {
+      font-size: 16px;
+    }
+    @include media-custom(500px) {
+      font-size: 14px;
+    }
+    @include media-custom(415px) {
+      font-size: 10px;
+      height: 17px;
+    }
+  }
+
+  &__priceContainerL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 35px;
+    border: solid 1px var(--limeBlack);
+    border-radius: 28px;
+    cursor: pointer;
+    @include media-custom($mediaWidthMid) {
+      width: 77px;
+      height: 29px;
+    }
+    @include media-custom($mediaWidthMob) {
+      gap: 4px;
+    }
+    @include media-custom(415px) {
+      width: 52px;
+      height: 20px;
+    }
+  }
+
+  &__blurContainerL {
+    position: absolute;
+    width: 112px;
+    height: 35px;
+    border: solid 1px var(--blur);
+    border-radius: 28px;
+    -moz-box-shadow: 0 0 10px var(--blur);
+    -webkit-box-shadow: 0 0 10px var(--blur);
+    box-shadow: 0 0 20px var(--blur);
+    filter: opacity(10%);
+    @include media-custom($mediaWidthMid) {
+      width: 77px;
+      height: 29px;
+    }
+    @include media-custom(415px) {
+      width: 52px;
+      height: 20px;
+    }
+  }
+
+  &__priceL {
+    font-size: 24px;
+    @include media-custom($mediaWidthMid) {
+      font-size: 14px;
+    }
+    @include media-custom(415px) {
+      font-size: 10px;
+    }
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    @include media-custom(415px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__descriprion {
+    display: flex;
+    @include media-custom($mediaWidthMid) {
+      //display: none;
+    }
+  }
+}

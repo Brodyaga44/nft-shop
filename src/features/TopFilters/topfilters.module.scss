@@ -1,0 +1,12 @@
+.filters {
+  &__filters {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__arrow {
+    path {
+      stroke: var(--limeBlack);
+    }
+  }
+}

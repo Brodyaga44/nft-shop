@@ -1,0 +1,48 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+$font: "Oswald", sans-serif;
+
+// colors
+html[data-theme = 'dark'] {
+  --wrapper: #25272e;
+  --bg: #2b2c33;
+  --lime: #38f2af;
+  --white: #ffffff;
+  --gray: #828282;
+  --Container: #373943;
+  --nftCard: #272a34;
+  --underline: #383940;
+  --text:#ffffff;
+  --logo: #38f2af;
+  --pathSelect: #38f2af;
+  --SelectColor: #38f2af;
+  --sortSwitch:#2c3c3d;
+  --limeBlack: #38f2af;
+  --blur: #38f2af;
+  --grayBlue: #828282;
+  --totalItems: #6c6d6e;
+}
+html[data-theme = 'light'] {
+  --wrapper: #ffffff;
+  --bg: #ffffff;
+  --lime: #38f2af;
+  --white: #ffffff;
+  --gray: #828282;
+  --Container: #f2f2f2;
+  --nftCard: #ffffff;
+  --underline: #f2f2f2;
+  --text:#000000;
+  --logo: #22b9ca;
+  --pathSelect: #000000;
+  --SelectColor: #22b9ca;
+  --sortSwitch:#f9f9f9;
+  --limeBlack: #000000;
+  --grayBlue: #22b9ca;
+  --totalItems: #333333;
+}
+
+
+// media
+$mediaWidthTablet: 1259px;
+$mediaWidthMob: 767px;
+$mediaWidthMid: 1430px;

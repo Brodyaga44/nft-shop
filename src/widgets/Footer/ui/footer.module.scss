@@ -1,0 +1,36 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+
+.footer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: var(--wrapper);
+  border-top: solid var(--underline) 1px;
+  @include media-custom(630px){
+    display: flex;
+    position: sticky;
+    bottom: 0;
+  }
+  &__iconsItems {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+  &__iconsItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--Container);
+  }
+  &__icon {
+    display: flex;
+    path{
+      fill: var(--text);
+    }
+  }
+}

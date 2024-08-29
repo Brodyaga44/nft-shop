@@ -1,0 +1,103 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+
+.root {
+  @include media-custom(630px) {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+    min-height: 100vh;
+  }
+}
+.main {
+  background-color: var(--bg);
+  &__content {
+    font-family: $font;
+  }
+  &__layout {
+    height: 100%;
+    background-color: var(--bg);
+  }
+
+  &__shopContent {
+    font-family: $font;
+    color: var(--text);
+  }
+}
+
+:global {
+  .ant-layout {
+    height: 100% !important;
+  }
+  .ant-layout-header {
+    padding: 0 30px 0 30px;
+  }
+  .ant-layout-sider {
+    flex: 0 0 249px !important;
+    max-width: unset !important;
+  }
+  .ant-menu {
+    background-color: var(--wrapper);
+    color: var(--text);
+    font: 500 16px $font;
+    line-height: 23.71px;
+    width: 249px;
+  }
+  .ant-menu-overflow {
+    //width: auto !important;
+  }
+  .ant-menu-horizontal {
+    padding: 0 0 0 11vh !important;
+    gap: 10px;
+    @include media-custom(900px) {
+      padding: unset !important;
+    }
+  }
+  .ant-menu-inline {
+    padding-top: 5vh;
+    border-right: solid var(--underline) 1px !important;
+  }
+  .ant-menu-title-content {
+    color: var(--text);
+    font: 400 16px $font;
+  }
+  .ant-menu-submenu-title {
+    border-bottom: solid var(--underline) 1px;
+    border-radius: 0 !important;
+    font: 500 16px $font;
+    .ant-menu-title-content {
+      font: 500 16px $font !important;
+    }
+  }
+  .ant-menu-submenu-arrow {
+    color: var(--text) !important;
+  }
+  .ant-menu-item-selected {
+    background-color: unset !important;
+    text-decoration: underline;
+    text-underline-offset: 26px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--SelectColor);
+    .ant-menu-title-content {
+      color: var(--pathSelect) !important;
+      font: 500 16px $font !important;
+    }
+  }
+  .ant-layout-sider-children {
+    height: 100vh !important;
+  }
+  .ant-layout-sider {
+    height: 100vh !important;
+    background: var(--wrapper) !important;
+    position: sticky !important;
+    top: 0 !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include media-custom(900px) {
+      display: none;
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

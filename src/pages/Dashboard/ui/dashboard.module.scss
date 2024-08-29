@@ -1,0 +1,203 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+
+.db {
+  &__Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 33px;
+    border-radius: 4px;
+    background-color: var(--pathSelect);
+    color: black;
+    font: $font !important;
+  }
+  &__btnText {
+    font: 500 14px $font;
+    line-height: 20.75px;
+    color: var(--wrapper);
+  }
+  &__body {
+    font-family: $font;
+    color: var(--white);
+    padding: 30px 30px 30px 20px;
+    @include media-custom(630px) {
+      padding: 30px 30px 30px 20px;
+    }
+    @include media-custom(400px) {
+      padding: 30px 30px 30px 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 125px);
+    gap: 20px;
+  }
+
+  &__headContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__headTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-custom(400px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__title {
+    font: 500 24px/1.1 $font;
+    font-size: 24px;
+    line-height: 35.57px;
+    color: var(--text);
+  }
+
+  &__titleContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  &__pagContainer {
+    flex-shrink: 0;
+  }
+
+
+  &__input {
+    padding-left: 17px;
+    border: none !important;
+    background-color: var(--Container);
+  }
+  &__arrow {
+    path {
+      stroke: var(--limeBlack);
+    }
+  }
+  &__filtersButton {
+    display: none;
+    @include media-custom(900px) {
+      display: unset;
+    }
+    @include media-custom(630px) {
+      display: none;
+    }
+  }
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__paginationFilter {
+    display: flex;
+    gap: 5px;
+  }
+  &__totalItems {
+    color: var(--totalItems);
+  }
+}
+
+:global {
+  .ant-select-selector {
+    background-color: var(--Container) !important;
+    border: none !important;
+    color: var(--limeBlack) !important;
+    box-shadow: unset !important;
+  }
+  .ant-select-selection-item {
+    font-family: $font !important;
+    color: var(--limeBlack) !important;
+  }
+  .ant-select-dropdown {
+    width: 110px !important;
+    font-family: $font !important;
+    background-color: var(--wrapper);
+  }
+  .ant-select-item {
+    color: var(--text) !important;
+  }
+  .rc-virtual-list-holder-inner {
+    background-color: var(--wrapper) !important;
+  }
+  .ant-select-item-option-selected {
+    background-color: var(--Container) !important;
+    color: var(--SelectColor) !important;
+  }
+  .ant-drawer-content-wrapper {
+    width: 249px !important;
+  }
+  .ant-drawer-body {
+    padding: unset !important;
+    background-color: var(--wrapper);
+    border-right: 1px solid var(--underline);
+  }
+  .ant-drawer-header {
+    background-color: var(--wrapper);
+  }
+  .ant-drawer-title {
+    display: flex;
+    justify-content: center;
+    font: 500 22px $font !important;
+    color: var(--text);
+  }
+  .ant-float-btn-body {
+    background-color: var(--Container) !important;
+  }
+  .ant-float-btn-icon {
+    path {
+      fill: var(--SelectColor);
+    }
+  }
+  .ant-pagination {
+    color: white !important;
+    min-width: unset !important;
+    li {
+      width: 21px !important;
+    }
+  }
+  .ant-pagination-item {
+    margin-right: 0 !important;
+    margin-top: 2px !important ;
+    font: 400 14px $font !important;
+    line-height: 20.75px !important ;
+    display: flex;
+    padding: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    a {
+      color: var(--text) !important;
+      padding: 0 !important;
+      width: 34px !important;
+    }
+  }
+  .ant-pagination-item-active {
+    background-color: unset !important;
+    border: none !important;
+    margin-bottom: 1px !important ;
+    padding: 1px !important;
+    a {
+      color: var(--SelectColor) !important;
+    }
+    ::before {
+      content: "Page ";
+    }
+  }
+  .anticon {
+    path {
+      fill: var(--text);
+    }
+  }
+}

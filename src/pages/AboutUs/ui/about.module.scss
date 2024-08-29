@@ -1,0 +1,9 @@
+.about {
+  width: 80vw;
+  height: auto;
+  padding: 5vh;
+  &__img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
