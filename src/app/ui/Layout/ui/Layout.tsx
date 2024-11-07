@@ -5,6 +5,8 @@ import { clsx } from "clsx";
 import Header from "../../../../widgets/Header/ui/Header.tsx";
 import Footer from "../../../../widgets/Footer/ui/Footer.tsx";
 import Aside from "../../../../features/Aside/ui/Aside.tsx";
+import Loading from "../../../../shared/Loading/ui/Loading.tsx";
+import { Suspense } from "react";
 
 const { Content, Sider } = LayoutAntd;
 
@@ -31,7 +33,9 @@ const Layout = (): React.ReactElement => {
               <Aside />
             </Sider>
             <Content>
-              <Outlet />
+              <Suspense fallback={<Loading />}>
+                <Outlet />
+              </Suspense>
             </Content>
           </LayoutAntd>
         </Content>

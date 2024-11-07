@@ -1,8 +1,8 @@
 import Layout from "../../ui/Layout/ui/Layout.tsx";
-import Dashboard from "../../../pages/Dashboard/ui/Dashboard.tsx";
-import About from "../../../pages/AboutUs/ui/AboutUs.tsx";
-import FAQ from "../../../pages/FAQ/ui/FAQ.tsx";
 import { RouteObject } from "react-router";
+import { AboutUsPage } from "../../../pages/AboutUs/ui";
+import { DashBoardPage } from "../../../pages/Dashboard/ui";
+import { FAQPage } from "../../../pages/FAQ/ui";
 
 const routes: RouteObject[] = [
   {
@@ -11,15 +11,15 @@ const routes: RouteObject[] = [
     children: [
       {
         path: "",
-        element: <Dashboard />,
+        element: <DashBoardPage />,
       },
       {
         path: "about",
-        element: <About />,
+        element: <AboutUsPage />,
       },
       {
         path: "faq",
-        element: <FAQ />,
+        element: <FAQPage />,
       },
       {
         path: "*",
