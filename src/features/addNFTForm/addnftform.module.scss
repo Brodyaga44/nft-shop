@@ -6,11 +6,30 @@
     border: none !important;
     background-color: var(--Container);
   }
+  &__catSelector {
+    width: 232px !important;
+  }
 
   &__form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  &__dndInput {
+    position: absolute;
+    width: 90%;
+    height: 60px;
+    opacity: 0.0;
+  }
+  &__dnd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 60px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    background-color: var(--Container);
   }
 
 }

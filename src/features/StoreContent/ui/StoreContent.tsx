@@ -1,6 +1,7 @@
 import styles from "./storecontent.module.scss";
-import NFTcard from "../../NFTcard/NFTcard.tsx";
 import { INFTB } from "../../../shared/config/interfaces/INFTB.ts";
+import CardGrid from "../../../entity/CardGrid/ui/CardGrid.tsx";
+import CardList from "../../../entity/CardList/ui/CardList.tsx";
 
 const StoreContent = ({ nfts, sort }: { nfts: INFTB[]; sort: string }) => {
   return (
@@ -22,7 +23,11 @@ const StoreContent = ({ nfts, sort }: { nfts: INFTB[]; sort: string }) => {
             if (nft.id !== 0) {
               return (
                 <div key={nft.id} className={styles.store__nftItems}>
-                  <NFTcard nft={nft} sort={sort} />
+                  {sort === "grid" ? (
+                    <CardGrid nft={nft} />
+                  ) : (
+                    <CardList nft={nft} />
+                  )}
                 </div>
               );
             }
