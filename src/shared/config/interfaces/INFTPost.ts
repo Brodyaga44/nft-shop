@@ -1,8 +1,8 @@
 export interface INFTPost {
   name: string;
   price: number;
-  typePrice: number;
-  cat: number;
+  typePrice: string;
+  cat: string;
   autor: string;
   image: File;
 }

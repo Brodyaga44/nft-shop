@@ -1,6 +1,5 @@
-@import "/src/app/styles/utils/variables";
-.addnft{
-
+@import '/src/app/styles/utils/variables';
+.addnft {
   &__input {
     padding-left: 17px;
     border: none !important;
@@ -19,7 +18,7 @@
     position: absolute;
     width: 90%;
     height: 60px;
-    opacity: 0.0;
+    opacity: 0;
   }
   &__dnd {
     display: flex;
@@ -31,10 +30,42 @@
     border-radius: 10px;
     background-color: var(--Container);
   }
+  &__hideDnd {
+    display: none;
+  }
+  &__hoverDnd {
+    border: 1px dotted var(--gray);
+    background-color: var(--sortSwitch);
+  }
+  &__previewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__photoPreview {
+    position: relative;
+    display: flex;
+    justify-content: center;
 
+    overflow: hidden;
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  &__photo {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  &__close {
+    position: absolute;
+    right: 3%;
+    fill: var(--text);
+    filter: drop-shadow(1px 1px 1px var(--bg));
+  }
 }
-
-
 
 :global {
   .ant-input {

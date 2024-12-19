@@ -1,7 +1,7 @@
-import { INFTPost } from "../../../shared/config/interfaces/INFTPost.ts";
-import $api from "../../../shared/api/api.ts";
-import { AxiosResponse } from "axios";
-import { useState } from "react";
+import { INFTPost } from '../../../shared/config/interfaces/INFTPost.ts';
+import $api from '../../../shared/api/api.ts';
+import { AxiosResponse } from 'axios';
+import { useState } from 'react';
 
 const useCreateNft = () => {
   const [newNFT, setNewNfts] = useState<INFTPost>();
@@ -9,13 +9,15 @@ const useCreateNft = () => {
   const createNFT = async (data: INFTPost): Promise<void> => {
     const tempData = {
       ...data,
-      image: new File([data.image], "idi_nahyi", {
-        type: "image/png",
+      cat: +data.cat,
+      typePrice: +data.typePrice,
+      image: new File([data.image], 'newPhoto', {
+        type: 'image/png',
       }),
     };
     const res: AxiosResponse<INFTPost> = await $api.post(`/nfts/`, tempData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        'Content-Type': 'multipart/form-data',
       },
     });
     if (res.data) {

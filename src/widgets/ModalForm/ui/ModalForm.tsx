@@ -1,5 +1,5 @@
-import { Modal } from "antd";
-import AddNFTForm from "../../../features/addNFTForm/addNFTForm.tsx";
+import { Modal } from 'antd';
+import AddNFTForm from '../../../features/AddNFTForm/AddNFTForm.tsx';
 
 const ModalForm = ({
   open,
@@ -8,20 +8,8 @@ const ModalForm = ({
   open: boolean;
   setOpen: (e: boolean) => void;
 }) => {
-  // const { addNFT } = useCreateNFT();
-  // const [newNFT, setNewNFT] = useState<INFTPost>();
-  const handleCancel = () => {
-    console.log("handleCancel");
-    setOpen(!open);
-  };
-
-  const handleOk = () => {
-    // const handleOk = async (data: INFTPost) => {
-    console.log("handleOk");
-    // const res = await addNFT(data);
-    // setNewNFT((prev: INFTPost) => [...prev, res.data]);
-
-    // addNFT();
+  const onClose = () => {
+    console.log('onClose');
     setOpen(!open);
   };
 
@@ -29,11 +17,11 @@ const ModalForm = ({
     <Modal
       title="New NFT"
       open={open}
-      onCancel={handleCancel}
+      onCancel={onClose}
       footer={null}
-      onOk={handleOk}
+      onOk={onClose}
     >
-      <AddNFTForm handleOk={handleOk} />
+      <AddNFTForm onClose={onClose} />
     </Modal>
   );
 };

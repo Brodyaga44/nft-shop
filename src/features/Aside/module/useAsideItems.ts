@@ -1,14 +1,16 @@
 import { MenuProps } from "antd";
 
+const menuItemsList = [
+  "Status",
+  "Price",
+  "Collections",
+  "Chains",
+  "Categories",
+  "Sale",
+];
+
 const useAsideItems = () => {
-  const items: MenuProps["items"] = [
-    "Status",
-    "Price",
-    "Collections",
-    "Chains",
-    "Categories",
-    "Sale",
-  ].map((key, index) => {
+  const items: MenuProps["items"] = menuItemsList.map((key, index) => {
     return {
       key,
       label: ` ${key}`,

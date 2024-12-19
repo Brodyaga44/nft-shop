@@ -1,8 +1,8 @@
 import styles from "./visualbutton.module.scss";
 import TopFilters from "../../TopFilters/TopFilters.tsx";
-import SearchForm from "../../../widgets/SearchForm/ui/SearchForm.tsx";
-import ListIcon from "../../../shared/assets/dashboard/listIcon.svg?react";
-import GridIcon from "../../../shared/assets/dashboard/gridIcon.svg?react";
+import SearchForm from "../../../shared/SearchForm/ui/SearchForm.tsx";
+import ListIcon from "../../../shared/assets/icons/listIcon.svg?react";
+import GridIcon from "../../../shared/assets/icons/gridIcon.svg?react";
 import { Dispatch, SetStateAction } from "react";
 
 const VisualButton = ({

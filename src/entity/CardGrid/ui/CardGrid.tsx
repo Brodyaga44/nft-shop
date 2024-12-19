@@ -1,5 +1,6 @@
-import styles from "./cardgrid.module.scss";
-import { CardProps } from "../../../shared/config/interfaces/Card/CardProps.ts";
+import styles from './cardgrid.module.scss';
+import { CardProps } from '../../../shared/config/interfaces/Card/CardProps.ts';
+import NftPhoto from '../../../shared/assets/photos/nftPhoto.png';
 
 const CardGrid = ({ nft }: CardProps) => {
   return (
@@ -7,16 +8,17 @@ const CardGrid = ({ nft }: CardProps) => {
       <div className={styles.grid__body}>
         <div className={styles.grid__cardTop}>
           <div className={styles.grid__PhotoContainer}>
-            <img src={nft.image} alt="" className={styles.grid__Photo} />
+            {/*<img src={nft.image} alt="" className={styles.grid__Photo} />*/}
+            <img src={NftPhoto} alt="" className={styles.grid__Photo} />
           </div>
-          <div className={styles.grid__Text}>
+          <section className={styles.grid__Text}>
             {/*<div className={styles.nft__Title}>{nft.title}</div>*/}
             <div className={styles.grid__Title}>{nft.name}</div>
             {/*<div className={styles.nft__Author}>{nft.author}</div>*/}
             <div className={styles.grid__Author}>{nft.autor}</div>
-          </div>
+          </section>
         </div>
-        <div className={styles.grid__priceBlock}>
+        <section className={styles.grid__priceBlock}>
           <div className={styles.grid__priceType}>
             {/*{nft.priceType} <span>Price</span>*/}
             {nft.typePrice}
@@ -27,7 +29,7 @@ const CardGrid = ({ nft }: CardProps) => {
               {nft.price} <span>ETH</span>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

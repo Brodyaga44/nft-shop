@@ -1,6 +1,6 @@
 import styles from "./topfilters.module.scss";
 import { Select } from "antd";
-import ArrowFilters from "../../shared/assets/arrow.svg?react";
+import ArrowFilters from "../../shared/assets/icons/arrow.svg?react";
 
 const TopFilters = () => {
   const handleChange = (value: string) => {

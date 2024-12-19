@@ -1,4 +1,4 @@
-import AddSearchForm from "../../../features/addSearchForm/addSearchForm.tsx";
+import AddSearchForm from "../../../features/AddSearchForm/AddSearchForm.tsx";
 
 const SearchForm = () => {
   return <AddSearchForm />;

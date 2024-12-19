@@ -1,21 +1,26 @@
-import styles from "./dashboard.module.scss";
-import { Button, FloatButton } from "antd";
-import { useState } from "react";
-import ModalForm from "../../../widgets/ModalForm/ui/ModalForm.tsx";
-import { FilterOutlined } from "@ant-design/icons";
-import AsideDrawer from "../../../widgets/AsideDrawer/ui/AsideDrawer.tsx";
-import useGetNfts from "../module/useGetNfts.ts";
-import VisualButton from "../../../features/VisualButton/ui/VisualButton.tsx";
-import PaginationModule from "../../../features/PaginationModule/ui/PaginationModule.tsx";
-import StoreContent from "../../../features/StoreContent/ui/StoreContent.tsx";
+import styles from './dashboard.module.scss';
+import { Button, FloatButton } from 'antd';
+import { useEffect, useState } from 'react';
+import ModalForm from '../../../widgets/ModalForm/ui/ModalForm.tsx';
+import { FilterOutlined } from '@ant-design/icons';
+import AsideDrawer from '../../../widgets/AsideDrawer/ui/AsideDrawer.tsx';
+import useGetNfts from '../model/useGetNfts.ts';
+import VisualButton from '../../../features/VisualButton/ui/VisualButton.tsx';
+import PaginationModule from '../../../features/PaginationModule/ui/PaginationModule.tsx';
+import StoreContent from '../../../features/StoreContent/ui/StoreContent.tsx';
 
 const Dashboard = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-  const { nfts, pags, changePage } = useGetNfts();
-  const [sort, setSort] = useState("grid");
-
+  const { nfts, pags, changePage, getNFTS } = useGetNfts();
+  const [sort, setSort] = useState('grid');
   console.log(nfts, pags);
+
+  useEffect(() => {
+    // эта часть была в useGetNfts
+    getNFTS();
+    console.log('kek');
+  }, [pags.current_page]);
 
   return (
     <div className={styles.db__body}>

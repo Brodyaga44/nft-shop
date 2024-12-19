@@ -70,12 +70,9 @@
     justify-content: space-between;
   }
 
-
-
   &__pagContainer {
     flex-shrink: 0;
   }
-
 
   &__input {
     padding-left: 17px;
@@ -156,6 +153,10 @@
   .ant-float-btn-body {
     background-color: var(--Container) !important;
   }
+  .ant-float-btn {
+    bottom: 10%;
+  }
+
   .ant-float-btn-icon {
     path {
       fill: var(--SelectColor);

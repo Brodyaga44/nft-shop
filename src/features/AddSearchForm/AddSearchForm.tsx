@@ -1,7 +1,7 @@
 import styles from "./addsearchform.module.scss";
 import { Input } from "antd";
 import { useState } from "react";
-import Lens from "../../shared/assets/layout/Lens.svg?react";
+import Lens from "../../shared/assets/icons/Lens.svg?react";
 
 const AddSearchForm = (props: any) => {
   const [value, setValue] = useState("");

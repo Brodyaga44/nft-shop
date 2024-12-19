@@ -1,5 +1,6 @@
-import img from "../../../shared/assets/about/about.jpg";
+import img from "../../../shared/assets/photos/about.jpg";
 import styles from "./about.module.scss";
+
 const AboutUs = () => {
   return (
     <div>

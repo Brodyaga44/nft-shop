@@ -1,13 +1,13 @@
 import styles from "./header.module.scss";
 import { Menu } from "antd";
-import SearchForm from "../../SearchForm/ui/SearchForm.tsx";
-import Logo from "../../../shared/assets/header/Logo.svg?react";
-import Mail from "../../../shared/assets/layout/mail.svg?react";
-import Note from "../../../shared/assets/layout/note.svg?react";
-import Pay from "../../../shared/assets/layout/pay.svg?react";
-import Photo from "../../../shared/assets/layout/DefaultPhoto.svg?react";
-import { useTheme } from "../../../app/module/hooks/useTheme/useTheme.ts";
-import useHeaderItems from "../module/useHeaderItems.ts";
+import SearchForm from "../../../shared/SearchForm/ui/SearchForm.tsx";
+import Logo from "../../../shared/assets/icons/Logo.svg?react";
+import Mail from "../../../shared/assets/icons/mail.svg?react";
+import Note from "../../../shared/assets/icons/note.svg?react";
+import Pay from "../../../shared/assets/icons/pay.svg?react";
+import Photo from "../../../shared/assets/icons/DefaultPhoto.svg?react";
+import { useTheme } from "../../../shared/hooks/useTheme/useTheme.ts";
+import useHeaderItems from "../model/useHeaderItems.ts";
 
 const Header = () => {
   const { currTheme, setTheme } = useTheme();
