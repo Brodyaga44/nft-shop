@@ -1,0 +1,18 @@
+{
+  "nfts": [
+    {
+      "id": 1,
+      "name": "Yo",
+      "price": "52",
+      "autor": "Balbes",
+      "typePrice": 2
+    },
+    {
+      "id": 2,
+      "name": "Z",
+      "price": "dorogo",
+      "autor": "Bombocla",
+      "typePrice": 1
+    }
+  ]
+}

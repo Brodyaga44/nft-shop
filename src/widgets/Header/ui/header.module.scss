@@ -1,0 +1,105 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: var(--wrapper);
+  border-bottom: solid var(--underline) 1px;
+  @include media-custom(630px) {
+    display: none;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    path {
+      fill: var(--logo);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    //gap: 30px;
+    font-family: $font;
+    background-color: var(--wrapper);
+  }
+
+  &__leftPart {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 30px;
+  }
+
+  &__rightPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 30px 0 30px;
+  }
+
+  &__searchbar {
+    width: 322px;
+    border-radius: 10px;
+    font-family: $font;
+    @include media-custom($mediaWidthTablet) {
+      width: 140px;
+    }
+    @include media-custom(800px) {
+      display: none;
+    }
+  }
+
+  &__iconsItems {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  &__iconsItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--Container);
+  }
+
+  &__icon {
+    path {
+      fill: var(--text);
+    }
+  }
+
+  &__profileContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__profilePhoto {
+    display: flex;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__profileName {
+    font-family: $font;
+    color: var(--text);
+    width: auto;
+    @include media-custom($mediaWidthTablet) {
+      display: none;
+    }
+  }
+}
+
+

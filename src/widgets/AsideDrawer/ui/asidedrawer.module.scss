@@ -1,0 +1,10 @@
+@import "/src/app/styles/utils/variables";
+@import "/src/app/styles/utils/media";
+.drawer {
+
+}
+:global {
+  .ant-drawer-content-wrapper {
+      width: 200px;
+  }
+}

@@ -1,0 +1,26 @@
+:global {
+  .ant-modal-title {
+    background: var(--bg);
+    color: var(--text) !important;
+  }
+  .ant-modal-content {
+    background: var(--bg) !important;
+    font-family: $font !important;
+    color: var(--text);
+
+  }
+  .ant-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .ant-modal-close {
+    color: var(--text) !important;
+  }
+  .ant-modal-footer {
+    * span {
+      font-family: $font !important;
+      color: var(--wrapper) !important;
+    }
+  }
+}
